@@ -1,0 +1,26 @@
+{
+  "name": "first-app-handlebars",
+  "version": "1.0.0",
+  "description": "first app using handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wismith/first-app-handlebars.git"
+  },
+  "keywords": [
+    "handlebars",
+    "express"
+  ],
+  "author": "will smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wismith/first-app-handlebars/issues"
+  },
+  "homepage": "https://github.com/wismith/first-app-handlebars#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
