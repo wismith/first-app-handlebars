@@ -25,9 +25,30 @@ app.engine('hbs', handlebars({
 
 app.use(express.static('public'));
 
+let fakeYelpAPI = () => {
+  return [
+    {
+      restaurant: 'Fish and Farm',
+      city: 'San Francisco',
+    },
+    {
+      restaurant: 'Demitri\'s BBQ',
+      city: 'Homewood',
+    },
+    {
+      restaurant: 'International Smoke',
+      city: 'San Francisco',
+    },
+    {
+      restaurant: 'Price\'s Chicken Coop',
+      city: 'Charlotte',
+    },
+  ]
+};
+
 app.get('/', (req, res) => {
   // Serves the body of the page to the container
-  res.render('main', {layout: 'index'});
+  res.render('main', {layout: 'index', yelp: fakeYelpAPI(), listExists: true});
 });
 
 // Make the app listen to port 3000
