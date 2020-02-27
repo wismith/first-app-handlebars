@@ -25,9 +25,11 @@ app.engine('hbs', handlebars({
 
 app.use(express.static('public'));
 
+let fakeAPI = () => 'faker';
+
 app.get('/', (req, res) => {
   // Serves the body of the page to the container
-  res.render('main', {layout: 'index'});
+  res.render('main', {layout: 'index', yelp1: fakeAPI()});
 });
 
 // Make the app listen to port 3000
